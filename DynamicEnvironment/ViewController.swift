@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("We are " + Urls.type.rawValue + " now.")
     }
     
     @IBAction func swapEnvironmentAction(_ sender: Any) {
