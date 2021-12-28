@@ -13,6 +13,7 @@ extension UIDevice {
         return TARGET_OS_SIMULATOR != 0
     }
     
+    //Ref: https://stackoverflow.com/questions/49194968/detect-jailbroken-in-ios-11-or-later/49195580#49195580
     static var isJailBroken: Bool {
         get {
             if UIDevice.current.isSimulator { return false }
