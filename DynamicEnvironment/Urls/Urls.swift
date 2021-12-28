@@ -8,7 +8,7 @@
 import Foundation
 
 enum Environment: String {
-    case live
+    case production
     case staging
 }
 
@@ -17,14 +17,14 @@ public enum Urls {
     static var type: Environment {
         get {
             return WhereAmIRunning.shared.isRunningInAppStoreEnvironment()
-                ? .live
-                : Environment(rawValue: UserDefaults.standard.string(forKey: "EnvironmentType") ?? "live") ?? .live
+                ? .production
+                : Environment(rawValue: UserDefaults.standard.string(forKey: "EnvironmentType") ?? "production") ?? .production
         }
         set {}
     }
         
     //MARK: live
-    private static var baseLive:String { "https://iamLive.com/" }
+    private static var baseLive:String { "https://iamProduction.com/" }
     
     //MARK: Staging
     private static var baseStage:String { "https://iamStaging.com/" }
@@ -32,7 +32,7 @@ public enum Urls {
     
     /*private*/ static var base: String {
         switch type {
-        case .live:
+        case .production:
             return baseLive
         case .staging:
             return baseStage

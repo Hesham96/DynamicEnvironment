@@ -17,7 +17,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        handleJailBroken()
         print("We are " + Urls.type.rawValue + " now.")
+    }
+    
+    func handleJailBroken(){
+        if UIDevice.isJailBroken{
+            let blockerView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 1000, height: 1000)))
+            blockerView.backgroundColor = .black
+            self.view.addSubview(blockerView)
+        }
     }
     
     @IBAction func swapEnvironmentAction(_ sender: Any) {
@@ -48,13 +57,13 @@ class ViewController: UIViewController {
         
         
         let productionAction = UIAlertAction(title: "Production", style: .default, handler: { _ in
-            Urls.type = .live
-            UserDefaults.standard.set("live", forKey: "EnvironmentType")
+            Urls.type = .production
+            UserDefaults.standard.set("production", forKey: "EnvironmentType")
             self.goToHome()
         })
         
         // Add Action Buttons Into Alert
-        alert.addAction(Urls.type == .live ? stagingAction : productionAction)
+        alert.addAction(Urls.type == .production ? stagingAction : productionAction)
         
         // Add Action Button Into Alert
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
