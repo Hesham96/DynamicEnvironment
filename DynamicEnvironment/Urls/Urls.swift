@@ -20,7 +20,6 @@ public enum Urls {
                 ? .live
                 : Environment(rawValue: UserDefaults.standard.string(forKey: "EnvironmentType") ?? "live") ?? .live
         }
-        
         set {}
     }
         

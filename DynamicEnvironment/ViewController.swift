@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
     
@@ -24,9 +25,12 @@ class ViewController: UIViewController {
         let isProduction = WhereAmIRunning.shared.isRunningInAppStoreEnvironment()
         
         if isProduction{
-            print("Do Something Live")
+            print("Do Something on Production")
         }else{
-            self.swapEnvironment()
+            let isJailBroken = UIDevice.isJailBroken
+            if !isJailBroken{
+                self.swapEnvironment()
+            }
         }
         
     }
@@ -50,12 +54,7 @@ class ViewController: UIViewController {
         })
         
         // Add Action Buttons Into Alert
-        if Urls.type != .live {
-            alert.addAction(productionAction)
-        }
-        if Urls.type != .staging {
-            alert.addAction(stagingAction)
-        }
+        alert.addAction(Urls.type == .live ? stagingAction : productionAction)
         
         // Add Action Button Into Alert
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))

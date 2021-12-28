@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		144E1363277B499C00C77D1B /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E1362277B499C00C77D1B /* UIDevice+Extension.swift */; };
+		144E1365277B4A4500C77D1B /* JailBrokenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E1364277B4A4500C77D1B /* JailBrokenHelper.swift */; };
 		14D9494F277903C3007B7BE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D9494E277903C3007B7BE7 /* AppDelegate.swift */; };
 		14D94953277903C3007B7BE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D94952277903C3007B7BE7 /* ViewController.swift */; };
 		14D94956277903C3007B7BE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D94954277903C3007B7BE7 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		144E1362277B499C00C77D1B /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		144E1364277B4A4500C77D1B /* JailBrokenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JailBrokenHelper.swift; sourceTree = "<group>"; };
 		14D9494B277903C3007B7BE7 /* DynamicEnvironment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicEnvironment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D9494E277903C3007B7BE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14D94952277903C3007B7BE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		144E1361277B498E00C77D1B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				144E1362277B499C00C77D1B /* UIDevice+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		14D94942277903C3007B7BE7 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +70,11 @@
 		14D9494D277903C3007B7BE7 /* DynamicEnvironment */ = {
 			isa = PBXGroup;
 			children = (
+				14D9495C277903C4007B7BE7 /* Info.plist */,
 				14D9496427790484007B7BE7 /* Assets */,
 				14D949622779046C007B7BE7 /* AppDelegate */,
 				14D9496327790479007B7BE7 /* Launch Screen */,
-				14D9495C277903C4007B7BE7 /* Info.plist */,
+				144E1361277B498E00C77D1B /* Extensions */,
 				14D94968277904E2007B7BE7 /* Helpers */,
 				14D94965277904AD007B7BE7 /* Urls */,
 				14D94952277903C3007B7BE7 /* ViewController.swift */,
@@ -105,6 +118,7 @@
 		14D94968277904E2007B7BE7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				144E1364277B4A4500C77D1B /* JailBrokenHelper.swift */,
 				14D94969277904EE007B7BE7 /* WhereAmIRunning.swift */,
 			);
 			path = Helpers;
@@ -180,6 +194,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				144E1365277B4A4500C77D1B /* JailBrokenHelper.swift in Sources */,
+				144E1363277B499C00C77D1B /* UIDevice+Extension.swift in Sources */,
 				14D94967277904B7007B7BE7 /* Urls.swift in Sources */,
 				14D94953277903C3007B7BE7 /* ViewController.swift in Sources */,
 				14D9494F277903C3007B7BE7 /* AppDelegate.swift in Sources */,
