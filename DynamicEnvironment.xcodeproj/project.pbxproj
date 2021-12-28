@@ -58,12 +58,12 @@
 		14D9494D277903C3007B7BE7 /* DynamicEnvironment */ = {
 			isa = PBXGroup;
 			children = (
+				14D9496427790484007B7BE7 /* Assets */,
+				14D949622779046C007B7BE7 /* AppDelegate */,
+				14D9496327790479007B7BE7 /* Launch Screen */,
 				14D9495C277903C4007B7BE7 /* Info.plist */,
 				14D94968277904E2007B7BE7 /* Helpers */,
 				14D94965277904AD007B7BE7 /* Urls */,
-				14D9496427790484007B7BE7 /* Assets */,
-				14D9496327790479007B7BE7 /* Launch Screen */,
-				14D949622779046C007B7BE7 /* AppDelegate */,
 				14D94952277903C3007B7BE7 /* ViewController.swift */,
 				14D94954277903C3007B7BE7 /* Main.storyboard */,
 			);

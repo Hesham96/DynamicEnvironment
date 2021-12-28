@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     
     
     func swapEnvironment(){
-        let alert = UIAlertController(title: "We are " + Urls.type.rawValue + " now." , message: "Swap  your environment Now.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "We are " + Urls.type.rawValue + " now." , message: "Swap  your environment Now.", preferredStyle: .actionSheet)
        
         let stagingAction = UIAlertAction(title: "Staging", style: .default, handler: { _ in
             Urls.type = .staging
